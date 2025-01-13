@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Love!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to top right, #8a2be2, #87ceeb, #ffb6c1);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      cursor: none; /* Hides default cursor globally */
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 20px 10px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 10px 10%;
+      line-height: 1.5;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .gallery img {
+      margin: 10px;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .message {
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    .surprise-button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .surprise-button:hover {
+      background-color: #ff3d3d;
+      transform: scale(1.1);
+    }
+
+    #surprise-text {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
+
+    .effect {
+      position: absolute;
+      font-size: 1.5rem;
+      pointer-events: none;
+      animation: float 2s ease-out forwards;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: transparent;
+      clip-path: polygon(
+        50% 0%, 
+        61% 35%, 
+        98% 35%, 
+        68% 57%, 
+        79% 91%, 
+        50% 70%, 
+        21% 91%, 
+        32% 57%, 
+        2% 35%, 
+        39% 35%
+      );
+      background: radial-gradient(circle, #fff, #ff9);
+      animation: sparkle 0.8s linear forwards;
+    }
+
+    @keyframes float {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100px) scale(0.5);
+      }
+    }
+
+    @keyframes sparkle {
+      0% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+        margin: 5px 5%;
+      }
+
+      .gallery img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .surprise-button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+      }
+
+      #surprise-text {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Ensure cursor reappears on interactive elements */
+    .surprise-button:hover,
+    .surprise-button {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, My dear Lovely Rib and Lovely Wife!</h1>
+  <p>Numbers 6:24-26: The Lord bless you and keep you; the Lord make his face shine on you and be gracious to you; the Lord turn his face toward you and give you peace.</p>
+  <p>I am so thankful to God Almighty Jesus for blessing me abundantly with you as my lovely rib and lovely wife.</p>
+  <p>Blessed be God Almighty Jesus abundantly forever and forever!</p>
+  <p>Glory be to God Almighty Jesus forever and forever!</p>
+  <p>Praise be to God Almighty Jesus forever and forever!</p>
+  <p>1 Chronicles 29:11: Yours, Lord, is the greatness and the power and the glory and the majesty and the splendor, for everything in heaven and earth is yours. Yours, Lord, is the kingdom; you are exalted as head over all.</p>
+  <p>He who finds a wife finds a good thing and obtains favor from the LORD, and I am highly favored by God with you, my dear lovely wife.</p>
+
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Memory 1">
+    <img src="photo2.jpg" alt="Memory 2">
+    <img src="photo3.jpg" alt="Memory 3">
+  </div>
+
+  <div class="message">
+    <p>Press the button below for a surprise!</p>
+    <button class="surprise-button" onclick="showSurprise()">Open Surprise</button>
+    <p id="surprise-text" style="display: none;">🎉 Surprise! You’re the best thing that ever happened to me! 🎉</p>
+  </div>
+
+  <script>
+    function showSurprise() {
+      const surpriseText = document.getElementById('surprise-text');
+      if (surpriseText.style.display === 'none' || surpriseText.style.display === '') {
+        surpriseText.style.display = 'block';
+      } else {
+        surpriseText.style.display = 'none';
+      }
+    }
+
+    // Burst effect of hearts and kisses
+    document.body.addEventListener('click', function (e) {
+      const x = e.pageX;
+      const y = e.pageY;
+
+      for (let i = 0; i < 8; i++) {
+        const element = document.createElement('span');
+        element.className = 'effect';
+        element.style.left = `${x + (Math.random() * 100 - 50)}px`;
+        element.style.top = `${y + (Math.random() * 100 - 50)}px`;
+        element.textContent = Math.random() > 0.5 ? '💋' : '💜';
+        document.body.appendChild(element);
+
+        setTimeout(() => element.remove(), 2000);
+      }
+    });
+
+    // Glitter effect (follows cursor or touch)
+    document.body.addEventListener('mousemove', function (e) {
+      const x = e.pageX;
+      const y = e.pageY;
+
+      for (let i = 0; i < 5; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.className = 'sparkle';
+
+        const offsetX = (Math.random() - 0.5) * 20;
+        const offsetY = (Math.random() - 0.5) * 20;
+
+        sparkle.style.left = `${x + offsetX}px`;
+        sparkle.style.top = `${y + offsetY}px`;
+
+        document.body.appendChild(sparkle);
+        setTimeout(() => sparkle.remove(), 800);
+      }
+    });
+  </script>
+</body>
+</html>
